@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FrozenEstates | Projects</title>
+  <link rel="stylesheet" href="E:/OfficeWorks/FrozenEstates/stylesp.css">
+</head>
+<body>
+
+ <div class="navbar">
+  <div class="navbar-logo">
+    <a href="E:/OfficeWorks/FrozenEstates/signin.html" class="logo-link">
+        <span class="blue-text">Frozen</span>
+        <span class="black-text">Estates</span>
+    </a>
+</div>
+
+    <div class="navbar-buttons">
+        <button onclick="location.href='Gallery.html';">Gallery</button>
+        <button onclick="location.href='Projects.html';">Projects</button>
+        <button onclick="location.href='AboutUs.html';">About Us</button>
+        <button onclick="location.href='ContactUs.html';">Contact Us</button>
+    </div>
+</div>
+<div class="login-container">
+    <!--<img src="image_url_here" alt="Image Description">-->
+    <h1 id="property-type">FrozenBlackSpruce</h1>
+<h3 id="property-details">
+    <strong>1 BHK Property Details:</strong><br>
+    This 1 BHK property offers a cozy living space ideal for individuals or couples. With an area of 600 sqft, it features 1 bedroom, 1 bathroom, and is priced at Rs. 50 lakhs. The property is equipped with essential amenities such as a swimming pool, gym, and parking space. It is conveniently located in the heart of CityName, providing easy access to nearby schools, hospitals, and shopping centers.
+</h3>
+
+
+    <button type="button" class="login-button" onclick="changePropertyType('next')">Back</button>
+    <button type="button" class="login-button" onclick="changePropertyType('back')">Next</button>
+    <!-- Your form code here if applicable -->
+</div>
+
+<script>
+    function changePropertyType(action) {
+        var propertyType = document.getElementById("property-type");
+        var propertyDetails = document.getElementById("property-details");
+
+        if (action === 'back') {
+            if (propertyType.innerHTML === "FrozenBlackSpruce") {
+                propertyType.innerHTML = "FrozenWhiteSpruce";
+                propertyDetails.innerHTML = `
+                    <strong>2 BHK Property Details:</strong><br>
+                    This spacious 2 BHK property offers ample living space suitable for small families. With an area of 800 sqft, it features 2 bedrooms, 2 bathrooms, and is priced at Rs. 70 lakhs. The property boasts modern amenities including a swimming pool, gym, and parking space. Situated in the bustling city of NextCityName, it provides convenient access to nearby schools, hospitals, and shopping centers.
+                `;
+            } else if (propertyType.innerHTML === "FrozenWhiteSpruce") {
+                propertyType.innerHTML = "FrozenGreenSpruce";
+                propertyDetails.innerHTML = `
+                    <strong>3 BHK Property Details:</strong><br>
+                    This spacious 3 BHK property offers comfortable living space perfect for families. With an area of 1200 sqft, it features 3 bedrooms, 2 bathrooms, and is priced at Rs. 90 lakhs. The property offers luxurious amenities including a clubhouse, landscaped gardens, and sports facilities. Located in the serene suburbs of SuburbName, it offers a peaceful retreat with easy access to essential services.
+                `;
+            } else if (propertyType.innerHTML === "FrozenGreenSpruce") {
+                propertyType.innerHTML = "FrozenBlueSpruce";
+                propertyDetails.innerHTML = `
+                    <strong>4 BHK Property Details:</strong><br>
+                    This luxurious 4 BHK property offers grand living space designed for premium lifestyle. With an area of 2000 sqft, it features 4 bedrooms, 3 bathrooms, and is priced at Rs. 1.5 crores. The property boasts top-notch amenities including a private terrace, home theater, and servant quarters. Situated in the upscale neighborhood of LuxeCity, it offers exclusivity and sophistication.
+                `;
+            } else {
+                // Handle other property type transitions and details
+            }
+        } else if (action === 'next') {
+            if (propertyType.innerHTML === "FrozenWhiteSpruce") {
+                propertyType.innerHTML = "FrozenBlackSpruce";
+                propertyDetails.innerHTML = `
+                    <strong>1 BHK Property Details:</strong><br>
+                    This 1 BHK property offers a cozy living space ideal for individuals or couples. With an area of 600 sqft, it features 1 bedroom, 1 bathroom, and is priced at Rs. 50 lakhs. The property is equipped with essential amenities such as a swimming pool, gym, and parking space. It is conveniently located in the heart of CityName, providing easy access to nearby schools, hospitals, and shopping centers.
+                `;
+            } else if (propertyType.innerHTML === "FrozenGreenSpruce") {
+                propertyType.innerHTML = "FrozenWhiteSpruce";
+                propertyDetails.innerHTML = `
+                    <strong>2 BHK Property Details:</strong><br>
+                    This spacious 2 BHK property offers ample living space suitable for small families. With an area of 800 sqft, it features 2 bedrooms, 2 bathrooms, and is priced at Rs. 70 lakhs. The property boasts modern amenities including a swimming pool, gym, and parking space. Situated in the bustling city of NextCityName, it provides convenient access to nearby schools, hospitals, and shopping centers.
+                `;
+            } else if (propertyType.innerHTML === "FrozenBlueSpruce") {
+                propertyType.innerHTML = "FrozenGreenSpruce";
+                propertyDetails.innerHTML = `
+                    <strong>3 BHK Property Details:</strong><br>
+                    This spacious 3 BHK property offers comfortable living space perfect for families. With an area of 1200 sqft, it features 3 bedrooms, 2 bathrooms, and is priced at Rs. 90 lakhs. The property offers luxurious amenities including a clubhouse, landscaped gardens, and sports facilities. Located in the serene suburbs of SuburbName, it offers a peaceful retreat with easy access to essential services.
+                `;
+            } else {
+                // Handle other property type transitions and details
+            }
+        }
+    }
+</script>
+
+
+  <div class="footer">
+  <!-- Footer content goes here -->
+  <!-- You can add links, copyright information, etc. -->
+  <span>copyright &copy; 2024 FrozenEstates</span>
+  <a href="#">Help Center</a>
+  <a href="#">Privacy Policy</a>
+  <a href="#">India</a>
+  <a href="#">Terms</a>
+</div>    
+</body>
+</html>

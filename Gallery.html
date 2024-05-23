@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FrozenEstates | Gallery</title>
+  <link rel="stylesheet" href="E:/OfficeWorks/FrozenEstates/stylesg.css">
+</head>
+<body>
+
+ <div class="navbar">
+ <div class="navbar-logo">
+    <a href="E:/OfficeWorks/FrozenEstates/signin.html" class="logo-link">
+        <span class="blue-text">Frozen</span>
+        <span class="black-text">Estates</span>
+    </a>
+</div>
+
+    <div class="navbar-buttons">
+        <button onclick="location.href='Gallery.html';">Gallery</button>
+        <button onclick="location.href='Projects.html';">Projects</button>
+        <button onclick="location.href='AboutUs.html';">About Us</button>
+        <button onclick="location.href='ContactUs.html';">Contact Us</button>
+    </div>
+</div>
+
+<div class="login-container">
+    <h1>Gallery</h1>
+    <img id="gallery-image" src="E:/OfficeWorks/FrozenEstates/ap.jpg" alt="Image Description">
+    <button type="button" class="login-button" onclick="changeImage('back')">Back</button>
+    <button type="button" class="login-button" onclick="changeImage('next')">Next</button>
+</div>
+
+<script>
+    var images = [
+        "E:/OfficeWorks/FrozenEstates/ap.jpg",
+        "E:/OfficeWorks/FrozenEstates/ap1.jpg",
+		"E:/OfficeWorks/FrozenEstates/ap2.jpg"// Add paths to additional images
+    ];
+    var currentIndex = 0;
+    
+    function changeImage(direction) {
+        var galleryImage = document.getElementById("gallery-image");
+        
+        if (direction === 'next') {
+            currentIndex = (currentIndex + 1) % images.length;
+        } else if (direction === 'back') {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+        }
+        
+        galleryImage.src = images[currentIndex];
+    }
+</script>
+
+
+  <div class="footer">
+  <!-- Footer content goes here -->
+  <!-- You can add links, copyright information, etc. -->
+  <span>copyright &copy; 2024 FrozenEstates</span>
+  <a href="#">Help Center</a>
+  <a href="#">Privacy Policy</a>
+  <a href="#">India</a>
+  <a href="#">Terms</a>
+</div>    
+</body>
+</html>

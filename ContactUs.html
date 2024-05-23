@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FrozenEstates | ContactUs</title>
+  <link rel="stylesheet" href="E:/OfficeWorks/FrozenEstates/stylescu.css">
+</head>
+<body>
+
+ <div class="navbar">
+ <div class="navbar-logo">
+    <a href="E:/OfficeWorks/FrozenEstates/signin.html" class="logo-link">
+        <span class="blue-text">Frozen</span>
+        <span class="black-text">Estates</span>
+    </a>
+</div>
+
+    <div class="navbar-buttons">
+        <button onclick="location.href='Gallery.html';">Gallery</button>
+        <button onclick="location.href='Projects.html';">Projects</button>
+        <button onclick="location.href='AboutUs.html';">About Us</button>
+        <button onclick="location.href='ContactUs.html';">Contact Us</button>
+    </div>
+</div>
+
+<div class="login-container">
+    <h1>Contact Us</h1>
+    <form action="/loginform" method="post" th:object="${user}">
+      <input type="text" placeholder="Name" th:fied="*{username}" th:required="true">
+      <input type="text" placeholder="Email" th:field="*{email}" th:required="true">
+	  <input type="tel" placeholder="Phone No" th:field="*{phone}" th:required="true">
+	  <input type="text" placeholder="Location" th:field="*{location}" th:required="true">
+	  <input type="text" placeholder="Message" th:field="*{message}" th:required="true">
+      <button type="submit" class="login-button">SUBMIT</button>
+    </form>
+  </div>
+
+  <div class="footer">
+  <!-- Footer content goes here -->
+  <!-- You can add links, copyright information, etc. -->
+  <span>copyright &copy; 2024 FrozenEstates</span>
+  <a href="#">Help Center</a>
+  <a href="#">Privacy Policy</a>
+  <a href="#">India</a>
+  <a href="#">Terms</a>
+</div>    
+</body>
+</html>

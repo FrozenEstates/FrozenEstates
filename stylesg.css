@@ -1,0 +1,138 @@
+  @font-face {
+	font-family: 'IK';
+	src: url('IK.otf') format('opentype'); /* Adjust the path and format as per your file */
+	}
+	body {
+    font-family: 'IK', Arial, sans-serif;
+    background-image: url('E:/OfficeWorks/FrozenEstates/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* Make the background image cover the entire body */
+    background-position: center; /* Center the background image */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+	}.blue-text {
+    color: #4db8ff; /* Apply blue color to the text within this span */
+	font-size: 27px;
+	}
+	.black-text {
+    color: black; /* Apply blue color to the text within this span */
+	font-size: 27px;
+	}
+    .navbar {
+      background-color: #fff;
+      padding: 15px 15px;
+      box-shadow: 0 2px 4px rgba(135, 206, 235, 0.8);
+      font-size: 18px;
+      display: flex;
+      justify-content: space-between; /* Add this to align items */
+      align-items: center; /* Add this to align items */
+	  Position: fixed;
+    width: 98%;
+    }
+	.footer {
+    background-color: #fff;
+    padding: 15px 15px; /* Adjust padding as needed */
+    box-shadow: 0 -1px 4px rgba(135, 206, 235, 0.8);
+    font-size: 14px;
+    text-align: center; /* Center align the content */
+    position: fixed; /* Position the footer fixed at the bottom */
+    left: 0; /* Align the footer to the left */
+    bottom: 0; /* Align the footer to the bottom */
+    width: 100%; /* Make the footer span the entire width of the viewport */
+}
+
+    .footer a {
+      color: black; /* Change the link color to black */
+      text-decoration: none; /* Remove the default underline */
+      transition: color 0.3s ease; /* Add transition effect for color change */
+	  margin: 0 6px;
+    }
+	.footer a:hover {
+    text-decoration: underline; /* Add underline on hover */
+    text-decoration-color: #4db8ff; /* Change underline color */
+}
+
+	.navbar-buttons button {
+	font-family: 'IK', Arial, sans-serif;
+    background-color: #4db8ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.3s ease, color 0.3s ease, outline 0.1s ease;
+    margin-left: 10px;
+	}
+	.navbar-buttons button:hover {
+	  background-color: #fff; /* Change hover background color */
+	  border-color: #4db8ff; /* Change border color on hover */
+	  color: #4db8ff; /* Change text color on hover */
+	  outline: 1px solid #4db8ff; /* Change outline color and width on hover */
+	}
+	.about{
+		color: #4db8ff;
+	}
+	 .login-container {
+      background-color: #fff;
+      padding: 35px;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(135, 206, 235, 0.8);
+      text-align: center;
+      max-width: 450px;
+	  height: 400px;
+      margin: 100px 800px 60px auto;
+    }
+	input {
+	  font-family: 'IK', Arial, sans-serif;
+      width: calc(100% - 22px);
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease; /* Add transition for smooth effect */
+    }
+
+    input:focus {
+      border-color: #4db8ff; /* Change border color when input is focused */
+      outline: none; /* Remove default focus outline */
+    }
+
+   .login-button {
+    font-family: 'IK', Arial, sans-serif;
+    background-color: #4db8ff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto; /* Set width to auto to adjust based on content */
+    margin-right: 10px; /* Adjust margin between buttons */
+    display: inline-block; /* Display buttons inline */
+}
+
+.login-button:hover {
+    background-color: #fff; /* Change hover background color */
+    border-color: #4db8ff; /* Change border color on hover */
+    color: #4db8ff; /* Change text color on hover */
+    outline: 1px solid #4db8ff;
+}
+
+	.logo-link {
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Add pointer cursor on hover */
+}
+
+.logo-link:hover {
+    /* Optional: Add hover effects if desired */
+    text-decoration: none;
+    color: #4db8ff; /* Change color on hover */
+}
+.login-container img {
+    max-width: 100%; /* Set maximum width to 100% of its container */
+    height: auto; /* Maintain aspect ratio */
+}
