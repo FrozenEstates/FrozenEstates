@@ -1,104 +1,100 @@
-  @font-face {
-	font-family: 'IK';
-	src: url('IK.otf') format('opentype'); /* Adjust the path and format as per your file */
-	}
+
+	
 	body {
-    font-family: 'IK', Arial, sans-serif;
-    background-image: url('bg.JPG');
-    background-repeat: no-repeat;
-    background-size: cover; /* Make the background image cover the entire body */
-    background-position: center; /* Center the background image */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-	}.blue-text {
-    color: #4db8ff; /* Apply blue color to the text within this span */
-	font-size: 27px;
+	  font-family: "Segoe UI", Arial, sans-serif;
+	  background-image: url('FEN.jpg');
+	  background-repeat: no-repeat; /* This ensures the background image is not repeated */
+	  background-size: auto 110%; /* This makes sure the background image covers the entire body */
+	  background-position: 50px -40px ; /* This centers the background image */
+	  margin: 0;
+	  padding: 0;
+	  display: flex;
+	  flex-direction: column;
+	  min-height: 100vh;
 	}
-	.black-text {
-    color: black; /* Apply blue color to the text within this span */
-	font-size: 27px;
-	}
-    .navbar {
+
+	.navbar {
       background-color: #fff;
-      padding: 15px 15px;
-      box-shadow: 0 2px 4px rgba(135, 206, 235, 0.8);
-      font-size: 18px;
-      display: flex;
-      justify-content: space-between; /* Add this to align items */
-      align-items: center; /* Add this to align items */
-	  Position: fixed;
-    width: 98%;
+      padding: 15px; /* Uniform padding */
+      justify-content: flex-end; /* Space between logo and buttons */
+      align-items: center; /* Vertically align items */
+      height: 20px; /* Set a fixed height for the navbar */
+	  box-shadow: 0 2px 4px rgba(0, 82, 204, 0.3);
     }
-	.footer {
-    background-color: #fff;
-    padding: 15px 15px; /* Adjust padding as needed */
-    box-shadow: 0 -1px 4px rgba(135, 206, 235, 0.8);
-    font-size: 14px;
-    text-align: center; /* Center align the content */
-    position: fixed; /* Position the footer fixed at the bottom */
-    left: 0; /* Align the footer to the left */
-    bottom: 0; /* Align the footer to the bottom */
-    width: 100%; /* Make the footer span the entire width of the viewport */
-}
-
-    .footer a {
-      color: black; /* Change the link color to black */
-      text-decoration: none; /* Remove the default underline */
-      transition: color 0.3s ease; /* Add transition effect for color change */
-	  margin: 0 6px;
+  
+    .atlassian-button {
+	  font-family:  "Segoe UI", Arial, sans-serif;
+	  float: right;
+	  font-weight: 500;
+	  height: 30px;
+	  font-size: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #1b1b1b; 
+      color: white;
+      border: none;
+      border-radius: 3px;           
+      padding: 0 10px;     
+      cursor: pointer;
+      box-shadow: 0 1px 2px rgba(9, 30, 66, 0.25);
+      transition: background-color 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+      white-space: nowrap;
+	  margin-top: -5px;
+	  margin-right: 5px;
     }
-	.footer a:hover {
-    text-decoration: underline; /* Add underline on hover */
-    text-decoration-color: #4db8ff; /* Change underline color */
-}
 
-	.navbar-buttons button {
-	font-family: 'IK', Arial, sans-serif;
-    background-color: #4db8ff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.2s ease, border-color 0.3s ease, color 0.3s ease, outline 0.1s ease;
-    margin-left: 10px;
-	}
-	.navbar-buttons button:hover {
-	  background-color: #fff; /* Change hover background color */
-	  border-color: #4db8ff; /* Change border color on hover */
-	  color: #4db8ff; /* Change text color on hover */
-	  outline: 1px solid #4db8ff; /* Change outline color and width on hover */
-	}
-	.about{
-		color: #4db8ff;
-	}
-		.logo-link {
-    text-decoration: none; /* Remove underline */
-    cursor: pointer; /* Add pointer cursor on hover */
-}
+    .atlassian-button:hover {
+      background-color: #0CB2FE; 
+      box-shadow: 0 2px 4px rgba(9, 30, 66, 0.3);
+    }
 
-.logo-link:hover {
-    /* Optional: Add hover effects if desired */
-    text-decoration: none;
-    color: #4db8ff; /* Change color on hover */
+    .atlassian-button:active {
+      background-color: #0747A6; 
+      box-shadow: 0 2px 6px rgba(9, 30, 66, 0.4);
+    }
+
+    .atlassian-button:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(0, 82, 204, 0.5); 
+    }
+	
+	        .tbutton:hover {
+            background: rgba(9, 30, 66, 0.08);
+            transition: background 0.15s ease-out;
+            color: #42526E;
+        }
+
+        .tbutton {
+            display: inline-flex;
+			margin-right: 10px;
+			float: right;
+			color: #1A2E45;
+            align-items: center;
+            justify-content: center;
+            padding: 0 10px;
+			font-family: "Segoe UI", Roboto, Arial, sans-serif;
+            font-weight: 500;
+            font-size: 12px;          
+            height: 30px;
+            background: none;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background 0.1s ease-out, box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38);
+			margin-top: -5px;
+        }
+		.tbutton:active {
+			background-color: #e9f2ff;
+			color: #0C66E4;
+		}
+		
+.navbar-links a:hover {
+    transition: color 0.15s ease-out;
+    color: blue;
 }
- .home-content {
-			text-decoration: justify;
-            position: absolute; /* or relative, depending on your layout */
-            top: 62%; /* adjust top position as needed */
-            left: 30%; /* adjust left position as needed */
-            transform: translate(-56%, -70%); /* centers the content horizontally and vertically */ 
-			text-align: Center;
-        }
-		.fe {
-            position: relative; /* Adjust position relative to its container */
-            width: 780px; /* Adjust width as needed */
-            height: 120px; /* Adjust height as needed */
-            margin: 0 auto; /* Center horizontally */
-			top: -40%; /* Adjust top position as needed */
-            left: 30%; /* Adjust left position as needed */
-            transform: translate(-110%, -50%);
-        }
+	
+
+
+	
