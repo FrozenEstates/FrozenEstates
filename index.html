@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="E:/OfficeWorks/FE/favicon.png" />
+  <title>FrozenEstates</title>
+  <style>
+    :root {
+      --batman-black: #0a0a0a;
+      --background: #ffffff;
+      --text: #1a1a1a;
+      --muted: #6b7280;
+      --accent: #facc15;
+      --shadow: rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  background: var(--background);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+}
+
+
+    header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 1.2rem; /* Reduced padding */
+  background: var(--background);
+  box-shadow: 0 2px 4px rgba(0, 82, 204, 0.4); /* Updated shadow */
+  height: 50px; /* Reduced from 70px */
+}
+
+
+    .logo {
+  font-size: 1.3rem; /* Optional: slightly reduce */
+  font-weight: bold;
+  color: var(--batman-black);
+  line-height: 1;
+}
+
+
+   nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.2rem; /* Adjust this if needed */
+}
+
+    nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #000000;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  height: 30px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.1s ease-out, box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38);
+}
+
+nav a:hover {
+  background: rgba(9, 30, 66, 0.08);
+  color: #42526E;
+}
+
+nav a:active {
+  background-color: #e9f2ff;
+  color: #0C66E4;
+}
+
+
+    .container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+
+    h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      background-color: var(--batman-black);
+      color: white;
+      border: none;
+      padding: 0.8rem 1.6rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 1rem;
+    }
+
+    .btn:hover {
+      background-color: #1a1a1a;
+    }
+
+
+.atlassian-button {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 500;
+  height: 35px;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222222;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 0 10px;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(9, 30, 66, 0.25);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+  margin-right: 5px;
+}
+
+.atlassian-button:hover {
+  background-color: #000000;
+  box-shadow: 0 2px 4px rgba(9, 30, 66, 0.3);
+}
+
+.atlassian-button:active {
+  background-color: #0747A6;
+  box-shadow: 0 2px 6px rgba(9, 30, 66, 0.4);
+}
+
+footer {
+  height: 50px;
+  font-size: 0.75rem;
+  line-height: 25px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  box-shadow: 0 -1px 3px rgba(0, 82, 204, 0.3);
+}
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">FrozenEstates</div>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="selectZone('BlackSpruce')">BlackSpruce</a></li>
+        <li><a href="#" onclick="selectZone('WhiteSpruce')">WhiteSpruce</a></li>
+        <li><a href="#" onclick="selectZone('BlueSpruce')">BlueSpruce</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1 id="main-heading">Welcome to FrozenEstates</h1>
+    <p id="main-desc">Enchanting Assets, Empowering Futures.</p>
+    <button class="atlassian-button" id="access-btn" onclick="startLogin()">Accessium</button>
+	<button class="atlassian-button" id="logout-btn" onclick="logout()" style="display: none;">Logout</button>
+
+  </div>
+
+  <footer>
+    © 2025 FrozenEstates Inc. All rights reserved.
+  </footer>
+
+  <script>
+    const users = {
+      WIZ001: {
+        password: atob("Y2hpZWZwYXNz"),
+        role: "Chief",
+        message: "Welcome Chief!",
+        amount: "₹12,00,000"
+      },
+      EMP002: {
+        password: atob("ZW1wMnBhc3M="),
+        role: "Employee",
+        message: "Welcome Employee!",
+        amount: "Access limited"
+      }
+    };
+
+    function startLogin() {
+      const code = prompt("Enter your Access Code:");
+      if (!code || !users[code]) {
+        alert("Invalid Access Code.");
+        return;
+      }
+      const password = prompt("Enter your Password:");
+      if (password !== users[code].password) {
+        alert("Incorrect Password.");
+        return;
+      }
+
+      document.getElementById('main-heading').innerText = users[code].message;
+      document.getElementById('main-desc').innerText = `Total in FrozenEstates: ${users[code].amount}`;
+      document.getElementById('access-btn').style.display = 'none';
+      document.getElementById('logout-btn').style.display = 'inline-block';
+    }
+
+    function logout() {
+      document.getElementById('main-heading').innerText = 'Welcome to FrozenEstates';
+      document.getElementById('main-desc').innerText = 'Streamlined task coordination between Chief and Employees — intuitive, fast, and secure.';
+      document.getElementById('access-btn').style.display = 'inline-block';
+      document.getElementById('logout-btn').style.display = 'none';
+    }
+
+    function selectZone(zone) {
+      document.getElementById('main-heading').innerText = `${zone} Zone`;
+      document.getElementById('main-desc').innerText = `Currently browsing: ${zone}`;
+    }
+	// Inside startLogin
+localStorage.setItem("loggedInUser", code);
+
+// Inside logout
+localStorage.removeItem("loggedInUser");
+
+// On page load
+window.onload = function () {
+  const loggedInUser = localStorage.getItem("loggedInUser");
+  if (loggedInUser && users[loggedInUser]) {
+    document.getElementById('main-heading').innerText = users[loggedInUser].message;
+    document.getElementById('main-desc').innerText = `Total in FrozenEstates: ${users[loggedInUser].amount}`;
+    document.getElementById('access-btn').style.display = 'none';
+    document.getElementById('logout-btn').style.display = 'inline-block';
+  }
+};
+// Add to each user
+tasks: ["Review budget", "Update status", "Attend meeting"]
+
+// Then show tasks after login
+const taskList = document.createElement("ul");
+users[code].tasks.forEach(task => {
+  const li = document.createElement("li");
+  li.textContent = task;
+  taskList.appendChild(li);
+});
+document.querySelector(".container").appendChild(taskList);
+
+  </script>
+
+</body>
+</html>
